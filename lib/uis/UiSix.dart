@@ -54,7 +54,7 @@ class UiSixState extends State<UiSix>{
                         children: [
                           Container(
                             // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-                            child: Icon(Icons.account_circle_rounded, size: MediaQuery.of(context).size.width/3.5,),
+                            child: Icon(Icons.account_circle_rounded, size: MediaQuery.of(context).size.width/3.5, color: Color(0xFF2B303D),),
                           ),
                           Expanded(
                             child: Container(
@@ -83,6 +83,7 @@ class UiSixState extends State<UiSix>{
                                             style: TextStyle(
                                               fontSize: MediaQuery.of(context).size.width * 0.07,
                                               fontWeight: FontWeight.w600,
+                                              color: Colors.blueAccent
                                             ),
                                           ),
                                         ),
