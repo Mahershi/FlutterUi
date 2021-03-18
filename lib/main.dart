@@ -9,8 +9,14 @@ import 'package:ui/uis/UiOne.dart';
 import 'package:ui/uis/UiSix.dart';
 import 'package:ui/uis/UiThree.dart';
 import 'package:ui/uis/UiTwo.dart';
+import 'package:ui/uis/bezier.dart';
+import 'package:ui/uis/bottomnav.dart';
+import 'package:ui/uis/bottomnav2.dart';
 import 'package:ui/uis/buybutton.dart';
+import 'package:ui/uis/circularlist.dart';
 import 'package:ui/uis/coffee.dart';
+import 'package:ui/uis/colorspage.dart';
+import 'package:ui/uis/rotate.dart';
 
 void main(){
   runApp(MyApp());
@@ -37,6 +43,16 @@ class HomePage extends StatelessWidget{
           child: GridView.count(
             crossAxisCount: 3,
             children: [
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("Colors", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => ColorsPage()));
+                    },
+                  )
+              ),
               Container(
                   margin: EdgeInsets.all(20),
                   child: OutlineButton(
@@ -145,7 +161,58 @@ class HomePage extends StatelessWidget{
                     borderSide: BorderSide(color: Colors.white),
                     child: Text("UI 10 Buy Button", style: TextStyle(color: Colors.white)),
                     onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => Bezier()));
+                    },
+                  )
+              ),
+
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("UI 11 Buy Button", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (_) => BuyButton()));
+                    },
+                  )
+              ),
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("UI 12 Bottom Nav", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => BottomNav()));
+                    },
+                  )
+              ),
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("UI 13 Another Bottom Nav", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => BottomNav2()));
+                    },
+                  )
+              ),
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("UI 14 Circular List", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => CircularListD()));
+                    },
+                  )
+              ),
+              Container(
+                  margin: EdgeInsets.all(20),
+                  child: OutlineButton(
+                    borderSide: BorderSide(color: Colors.white),
+                    child: Text("UI 14 Rotatet", style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => Rotate()));
                     },
                   )
               )
